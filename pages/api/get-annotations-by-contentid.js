@@ -1,4 +1,3 @@
-import { NextApiHandler } from 'next'
 import { query } from '@/lib/db'
 
 /**
@@ -6,7 +5,7 @@ import { query } from '@/lib/db'
  * by the front-end (ie setting display to none) so as not to throw off the indices of the
  * succeeding records.
  */
-const handler: NextApiHandler = async (req, res) => {
+const handler = async (req, res) => {
   const { userId, contentId } = req.query
 
   try {
